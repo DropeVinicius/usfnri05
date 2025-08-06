@@ -1,0 +1,4494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Português para Estrangeiros - Unidade 5</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #134969;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #134969;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 220px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 5px;
+            z-index: 10;
+            scrollbar-width: thin;
+            scrollbar-color: #fff #134969;
+        }
+        @media (max-width: 400px) {
+            .navbar ul li {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #133869; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        /* Para Chrome, Edge e Safari */
+        .navbar ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar ul::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .navbar ul::-webkit-scrollbar-track {
+            background-color: #9f43be;
+        }
+
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1744829642/jf8ihsql9tactxny2lhc.png');
+            background-size: cover; /* preenche tudo */
+            background-position: bottom center; /* mostra mais da parte inferior */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.5; /* ou ajuste se quiser efeito */
+            z-index: -1;
+            /* Ajuste de transparência */
+            filter: brightness(0.9); /* Escurece levemente a imagem para maior contraste do texto */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+        
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        @media (max-width: 768px) {
+            .capa-livro::before {
+                background-attachment: scroll; /* remove o parallax */
+                background-position: center center; /* centraliza a imagem */
+            }
+
+            .capa-livro {
+                height: auto; /* deixa o conteúdo definir a altura */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 48px;
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 24px;
+            }
+            }
+
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #134969; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            overflow-x: hidden; /* Impede rolagem horizontal */
+            border-bottom: 2px solid #134969;
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #134969; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            width: 100%;
+            background-color: #809dae70; /* Verde mais claro */
+            padding: 64px 0;
+        }
+                /* Conteúdo centralizado dentro da faixa */
+        .introducao .conteudo-centralizado {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Parágrafos da introdução */
+        .introducao .conteudo-centralizado p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 70vh; /* Reduz a altura da capa */
+            }
+            .capa-livro::before {
+                background-position: center center; /* centraliza melhor no mobile */
+            }
+            .capa-livro .titulo-materia {
+                font-size: 40px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 24px; /* Reduz o tamanho do subtítulo */
+            }
+            .capa-livro .titulo-programa {
+                font-size: 18px;
+            }
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 100%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo base da seção */
+        .secao1 .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .secao1 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao1 .tabs-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Estilo base da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #b9e5a92c;
+            border-bottom: 3px solid #92d678;
+        }
+        .secao1 .outer-container-alt {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        /* Imagem de topo */
+        .secao1 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao1 .faixa-verde {
+            width: 100%;
+            background-color: #b9e5a9;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao1 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao1 .titulo-verde {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao1 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao1 .faixa-verde .titulo-secao {
+                font-size: 20px;
+            }
+
+            .secao1 p {
+                font-size: 1rem;
+            }
+            .secao1 .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao1 .faixa-verde .titulo-secao {
+                font-size: 20px;
+            }
+
+            .secao1 p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Estilo base da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #3a96a61c;
+            border-bottom: 3px solid #3a95a6;
+        }
+        .secao2 .conteudo-secao {
+            width: 100%;
+            padding: 64px 0;
+            box-sizing: border-box;
+        }
+        .secao2 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+       .secao2 .outer-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        /* Imagem de topo */
+        .secao2 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao2 .faixa-verde {
+            width: 100%;
+            background-color: #3a95a6;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao2 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao2 .titulo-verde {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #3a95a6; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao2 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao2 .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .secao2 p {
+                font-size: 1rem;
+            }
+            .secao2 .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao2 .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .secao2 p {
+                font-size: 0.95rem;
+            }
+        }
+        /* Estilo base da seção */
+        .secao4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #809dae70;
+            border-bottom: 3px solid #134969;
+        }
+
+        .secao4 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao4 .outer-container-altv {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+       }
+        .secao4 .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .secao4 .titulo-azul {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #134969; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Imagem de topo */
+        .secao4 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao4 .faixa-verde {
+            width: 100%;
+            background-color: #134969;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao4 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao4 .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao4 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao4 .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .secao4 p {
+                font-size: 1rem;
+            }
+            .secao4 .imagem-topo {
+                max-height: 180px;
+            }
+            .secao4 .titulo-azul {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao4 .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .secao4 p {
+                font-size: 0.95rem;
+            }
+        }
+        .secao1 .topicos-destacados {
+            margin-left: 40px;
+            padding-left: 20px;
+            width: 85%;
+        }
+
+        .secao1 .topicos-destacados p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .secao1 .topicos-destacados {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao4 .topicos-destacados {
+            margin-left: 40px;
+            padding-left: 20px;
+            width: 85%;
+        }
+
+        .secao4 .topicos-destacados p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .secao4 .topicos-destacados {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3a95a6;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-headerb {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #134969;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-headerc {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b9e5a9;
+            color: #015A42;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-headerd {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #134969; /* exemplo: laranja suave */
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #3a95a6;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentb {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #134969;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentc {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #b9e5a9;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentd {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; 
+            border: 2px solid #134969; /* mesma cor da header para consistência */
+            border-radius: 0 0 10px 10px; 
+        }
+
+        .acordeon-content p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentb p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentc p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentc h4 {
+            text-align: center;
+
+        }
+        .acordeon-contentd p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .tituloacordeonverde{
+            color: #015A42;
+        }
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+            
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerb.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerc.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+                /* Ícone giratório */
+        .acordeon-headerd.active .acordeon-icon {
+            transform: rotate(180deg);
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+            .acordeon-headerb {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentb {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentb p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+
+            .acordeon-headerc {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentc {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentc p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+            .acordeon-headerd {
+                font-size: 20px;
+                padding: 12px;
+            }
+
+            .acordeon-contentd {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .acordeon-contentd p {
+                margin: 15px;
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+            .acordeon-headerb {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentb {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentb p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+
+            .acordeon-headerc {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentc {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentc p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+            .acordeon-headerd {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .acordeon-contentd {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .acordeon-contentd p {
+                margin: 10px;
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+            .slider-texto-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid #3a95a6;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #FFF;
+            border-radius: 8px;
+        }
+        .slider-texto-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide-texto {
+            display: none;
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            word-break: keep-all;
+            white-space: normal;
+            
+        }
+
+        .slide-texto.ativo {
+            display: block;
+        }
+
+        .titulo-texto {
+            color: #b9e5a9;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+
+        .conteudo-texto {
+            font-size: 16px !important;
+            color: #333 !important;
+            font-family: 'Roboto', sans-serif !important;
+            width: 100%;
+            margin: 0 auto;
+            word-break: normal;
+            white-space: normal;
+            text-align: center !important;
+        }
+        .titulo-texto,
+        .conteudo-texto {
+            word-break: break-word;
+            white-space: normal;
+        }
+        .seta-texto {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #3a95a6;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta-texto.esquerda {
+            left: 0;
+        }
+
+        .seta-texto.direita {
+            right: 0;
+        }
+
+    @media (max-width: 768px) {
+        .titulo-texto {
+            font-size: 20px;
+        }
+
+        .conteudo-texto {
+            font-size: 18px;
+        }
+
+        .seta-texto {
+            font-size: 24px;
+        }
+    }
+        .slider-texto-indicadores {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .dot-texto {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dot-texto.ativo {
+            background-color: #3a95a6;
+        }
+        /* ------------------- */
+        /* TEMAS DE COR        */
+        /* ------------------- */
+
+        /* Tema verde */
+        .tema-verde {
+            border-color: #92d678;
+        }
+        .tema-verde .seta-texto {
+            color: #92d678;
+        }
+        .tema-verde .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Tema roxo */
+        .tema-roxo {
+            border-color: #134969;
+        }
+        .tema-roxo .seta-texto {
+            color: #134969;
+        }
+        .tema-roxo .dot-texto.ativo {
+            background-color: #134969;
+        }
+
+        /* Tema roxo */
+        .tema-green {
+            border-color: #92d678;
+        }
+        .tema-green .seta-texto {
+            color: #92d678;
+        }
+        .tema-green .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .seta-texto { font-size: 24px; }
+            .conteudo-texto { font-size: 18px; }
+        }
+        .container-arcos {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+
+        /* Primeiro arco */
+        .arco1 {
+            position: absolute;
+            top: -8px;  /* sobe um pouco */
+            left: -8px; /* vai um pouco pra esquerda */
+            width: 100%;
+            height: 100%;
+            border: 2px solid #92d678;
+            border-radius: 20px;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        /* Segundo arco */
+        .arco2 {
+            position: absolute;
+            top: 8px;   /* desce um pouco */
+            left: 8px;  /* vai um pouco pra direita */
+            width: 100%;
+            height: 100%;
+            border: 2px solid #92d678;
+            border-radius: 20px;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        /* Conteúdo */
+        .conteudo-arcos {
+            position: relative; 
+        }
+
+        .conteudo-arcos p {
+            margin: 8px 0;
+            font-size: 16px !important;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            color: #333;
+        }
+        /* Título do Slider */
+        .slider-quadrinhos .titulo-slider {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+        
+        }
+
+        .slider-quadrinhos .titulo-slider .figura {
+            color: #015A42;
+        }
+        /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal-imagem {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .modal-imagem.ativo {
+            display: flex;
+        }
+
+        .imagem-modal {
+            max-width: 90%;
+            max-height: 80%;
+            margin-bottom: 20px;
+        }
+
+        .fechar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .seta-modal {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .seta-modal.esquerda {
+            left: 20px;
+        }
+
+        .seta-modal.direita {
+            right: 20px;
+        }
+
+        .indicador-contador {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 12px;
+            border-radius: 15px;
+        }
+
+        .indicador-pontos {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .indicador-pontos span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+        }
+
+        .indicador-pontos span.ativo {
+            background-color: white;
+        }
+
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #b9e5a9;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        /* Imagens do slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+            max-width: 100%;
+            max-height: 600px;
+            margin: 0 auto;
+            border-radius: 10px;
+            object-fit: contain;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide.ativo {
+            display: block;
+        }
+
+        /* Setas */
+        .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #b9e5a9;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta.esquerda {
+            left: 0;
+        }
+
+        .seta.direita {
+            right: 0;
+        }
+
+            /* Responsivo */
+        @media (max-width: 768px) {
+            .slider-container {
+                padding: 15px;
+            }
+
+            .slide {
+                max-width: 100%;
+                max-height: 350px;
+            }
+
+            .seta {
+                font-size: 24px;
+            }
+
+            .slider-quadrinhos .titulo-slider {
+                font-size: 18px;
+            }
+        }
+        /* === Tema Verde (Padrão) === */
+    .slider-quadrinhos.tema-verde .titulo-slider .figura {
+        color: #015A42;
+    }
+
+    .slider-quadrinhos.tema-verde .slider-container {
+        border: 2px solid #b9e5a9;
+        background-color: #fff;
+    }
+
+    .slider-quadrinhos.tema-verde .seta {
+        color: #b9e5a9;
+    }
+
+    .slider-quadrinhos.tema-verde .slider-indicadores .dot.ativo {
+        background-color: #b9e5a9;
+    }
+
+
+    /* === Tema Azul (Novo) === */
+    .slider-quadrinhos.tema-azul .titulo-slider .figura {
+        color: #004A99;
+    }
+
+    .slider-quadrinhos.tema-azul .slider-container {
+        border: 2px solid #134969;
+        background-color: #f9fbff;
+    }
+
+    .slider-quadrinhos.tema-azul .seta {
+        color: #134969;
+    }
+
+    .slider-quadrinhos.tema-azul .slider-indicadores .dot.ativo {
+        background-color: #134969;
+    } 
+                /* Indicadores de slide (bolinhas) */
+        .slider-indicadores {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .slider-indicadores .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .slider-indicadores .dot.ativo {
+            background-color: #b9e5a9;
+        }
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+            max-width: 500px;
+        }
+        .fonte-tabela {
+            font-size: 12px !important;
+            color: #000 !important;
+            display: flex;
+            justify-content: left;
+            margin-top: -15px !important;
+            font-style: italic;
+        }
+        @media (max-width: 768px){
+            .fonte-tabela {
+                margin-top: -5px !important;
+                font-size: 12px !important;
+                color: #333 !important;
+            }
+        }
+        .fonte-quadro {
+            font-size: 12px !important;
+            font-style: italic !important;
+            text-align: center !important;
+            color: #555 !important; /* tom discreto */
+        }
+        .text-italic {
+            font-style: italic;
+        }
+        /* Seção geral */
+        .tabs-section {
+            max-width: 800px;
+            margin: 40px auto;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cabeçalho das tabs */
+        .tabs-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 0;
+            background-color: transparent;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        /* Botões de cada aba */
+        .tab-btn {
+            background-color: #b9e5a9;
+            color: #FFF;
+            border: 2px solid #b9e5a9;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+        /* Botões de cada aba */
+        .tab-btnb {
+            background-color: #134969;
+            color: #FFF;
+            border: 2px solid #134969;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+        /* Hover melhorado */
+        .tab-btn:hover {
+            background-color: #b9e5a9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-btnb:hover {
+            background-color: #134969;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Estado ativo OTIMIZADO */
+        .tab-btn.ativo {
+            background-color: white;
+            color: #015A42;
+            border-color: #b9e5a9;
+            border-bottom: 2px solid #b9e5a9;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-btnb.ativo {
+            background-color: white;
+            color: #134969;
+            border-color: #134969;
+            border-bottom: 2px solid #134969;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Focus para acessibilidade */
+        .tab-btn:focus,
+        .tab-btnb:focus {
+            outline-offset: 2px;
+        }
+
+        .tab-btn:focus-visible,
+        .tab-btnb:focus-visible {
+            box-shadow: 0 0 0 3px rgba(58, 149, 166, 0.3);
+        }
+        /* Conteúdo das tabs - VERSÃO OTIMIZADA COM ALTURA FIXA */
+        .tabs-content {
+            border: 2px solid #b9e5a9;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+
+        .tabs-contentb {
+            border: 2px solid #134969;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+        /* Estados ativos do conteúdo */
+        .tabs-content.ativo,
+        .tabs-contentb.ativo {
+            display: block;
+        }
+
+        .tab-content {
+            display: none;
+            line-height: 1.6;
+            color: #374151;
+            /* NOVO: Garante que o conteúdo não force expansão */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .tab-content.ativo {
+            display: block;
+        }
+
+        /* Estilização do conteúdo interno */
+        .tab-content p {
+            margin-bottom: 12px;
+        }
+
+        .tab-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tab-content strong {
+            color: #000;
+        }
+
+        /* Remove o ::after antigo */
+        .tab-btn.ativo::after,
+        .tab-btnb.ativo::after {
+            display: none;
+        }
+
+        /* Regras de ocultação otimizadas */
+        .tab-content:not(.ativo),
+        .tabs-content:not(.ativo),
+        .tabs-contentb:not(.ativo) {
+            display: none;
+        }
+
+        /* Responsividade melhorada */
+        @media screen and (max-width: 768px) {
+            .tabs-header {
+                justify-content: center;
+            }
+
+            .tab-btn,
+            .tab-btnb {
+                flex: 1 1 45%;
+                font-size: 13px;
+                padding: 10px 15px;
+                min-width: 100px;
+            }
+
+            /* NOVO: Ajusta altura mínima em mobile */
+            .tabs-content,
+            .tabs-contentb {
+                min-height: 120px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .tab-btn,
+            .tab-btnb {
+                flex: 1 1 100%;
+                font-size: 14px;
+                padding: 12px 16px;
+                margin-bottom: 5px;
+            }
+
+            .tabs-content,
+            .tabs-contentb {
+                padding: 16px;
+                border-radius: 8px;
+                /* NOVO: Altura mínima menor em telas muito pequenas */
+                min-height: 100px;
+            }
+
+            .tabs-section {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+        }
+
+        /* Melhorias extras para UX */
+        @media (prefers-reduced-motion: reduce) {
+            .tab-btn,
+            .tab-btnb {
+                transition: none;
+            }
+        }
+
+        /* Estado de carregamento (opcional) */
+        .tabs-section.loading .tab-btn,
+        .tabs-section.loading .tab-btnb {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* NOVO: Se você quiser uma altura específica para cada grupo */
+        #grupo-tabs-c .tabs-content {
+            min-height: 180px; /* Ajuste conforme necessário */
+        }
+
+        #grupo-tabs-d .tabs-content {
+            min-height: 160px; /* Ajuste conforme necessário */
+        }
+        .card-horizontal-praticar {
+        border: 2px solid #3a95a6;
+        padding: 10px 15px;
+        background-color: #ffffff2f;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 768px) {
+        .card-horizontal-praticar{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    .card-horizontal-praticar-alt {
+        border: 2px solid #92d678;
+        padding: 10px 15px;
+        background-color: #ffffff2f;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+   
+    .titulo-praticar {
+        color: #3a95a6;
+        font-size: 35px;
+        border-bottom: 2px solid #3a95a6;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        text-align: left !important;
+        font-family: 'Bebas Neue', cursive !important;
+        font-weight: lighter !important;
+    }
+    .titulo-praticar-alt {
+        color: #92d678;
+        font-size: 35px;
+        border-bottom: 2px solid #92d678;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        text-align: left !important;
+        font-family: 'Bebas Neue', cursive !important;
+        font-weight: lighter !important;
+    }
+    
+    .texto-praticar {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+        font-family: 'Roboto', sans-serif !important; 
+        color: #333 !important;
+        margin-bottom: 20px;
+        text-align: justify !important;
+    }
+
+    .imagem-praticar {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        display: block;
+    }
+    .outer-container {
+        padding: 10px;
+        border: 2px solid #3a95a6;
+        border-radius: 10px;
+        background-color: #f3f6f8;
+        width: fit-content;
+    }
+    .outer-container-alt {
+        padding: 10px;
+        border: 2px solid #92d678; 
+        border-radius: 10px;
+        background-color: #b9e5a917; 
+        width: fit-content;
+        }
+    .outer-container-altv {
+        padding: 10px;
+        border: 2px solid #134969;  
+        border-radius: 10px;
+        background-color: #f3f6f8;
+        width: fit-content;
+        }
+    .inner-container-alt {
+        padding: 20px;
+        border: 2px solid #92d678; 
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .inner-container-altv {
+        padding: 20px;
+        border: 2px solid #134969; 
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+        .figure-title-alt {
+        font-weight: bold;
+        color: #015A42; /* tom vinho mais forte */
+    }
+    
+    .inner-container {
+        padding: 20px;
+        border: 2px solid #3a95a6;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .image-section {
+        flex: 1 1 220px; /* Permite um pouco mais de largura, mas flexível */
+        max-width: 250px;
+        text-align: left;
+    }
+
+    .image-section img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+    }
+
+    .figure-title {
+        font-weight: bold;
+        color: #015A42;
+    }
+
+    .image-caption {
+        font-size: 12px;
+        color: #444;
+        font-style: italic;
+    }
+
+    .image-caption a {
+        color: #444;
+        text-decoration: underline;
+    }
+
+    .text-section {
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+    .figure-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .figure-subtitle {
+        color: #333;
+    }
+        /* Thumbnail com imagem de fundo e botão play */
+        .video-thumbnail {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            border: 2px solid #3a95a6;
+            border-radius: 16px;
+            padding: 20px; /* Espaço entre borda e imagem */
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        
+         /* Camada da imagem de fundo */
+        .video-bg {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1745434099/k1hkgcwcv7ydys0dxmzu.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            overflow: hidden;
+        }       
+         
+        /* Camada de esverdeamento */
+        .video-bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #3a96a677;
+            z-index: 1;
+        }
+
+        
+        /* Ícone de play centralizado */
+        .play-icon {
+            z-index: 1;
+            font-size: 90px;
+            color: #fff;
+            background-color: #3a95a6;
+            border-radius: 25%;
+            width: 150px;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        
+        .play-icon:hover {
+            transform: scale(1.1);
+        }
+                /* Temas personalizados */
+        .estilo-azul {
+            border-color: #92d678;
+        }
+
+        .estilo-azul .video-bg::after {
+            background-color: #93d678b6;
+        }
+
+        .estilo-azul .play-icon,
+        .estilo-azul .fechar-modal {
+            background-color: #92d678;
+        }
+
+        .estilo-vermelho {
+            border-color: #d94a4a;
+        }
+
+        .estilo-vermelho .video-bg::after {
+            background-color: rgba(217, 74, 74, 0.5);
+        }
+
+        .estilo-vermelho .play-icon,
+        .estilo-vermelho .fechar-modal {
+            background-color: #d94a4a;
+        }
+
+        .estilo-verde {
+            border-color: #4caf50;
+        }
+
+        .estilo-verde .video-bg::after {
+            background-color: rgba(76, 175, 80, 0.5);
+        }
+
+        .estilo-verde .play-icon,
+        .estilo-verde .fechar-modal {
+            background-color: #4caf50;
+        }
+        /* Modal de vídeo */
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal .modal-content {
+            position: relative;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .video-modal iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .fechar-modal {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 30px;
+            color: white;
+            background: #3a95a6;
+            border-radius: 50%;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        /* Container geral da figura */
+        .figura-container {
+        margin: 2rem 0;
+        font-family: 'Roboto', sans-serif;
+        text-align: center !important;
+        }
+
+        /* Título da figura */
+        .figura-titulo {
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        text-align: center !important;
+        }
+
+        /* Parte "Figura 6." em verde */
+        .figura-numero {
+        color: #0c8b63;
+        }
+
+        /* Parte "Corpo Humano" em preto normal */
+        .figura-descricao {
+        color: #000;
+        }
+
+        .figura-quadro {
+        border: 2px solid #134969;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: #f0f7fc;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        }
+
+        /* Imagem centralizada e responsiva com largura máxima de 600px */
+        .figura-imagem {
+        max-width: 100%;
+        width: 100%;
+        max-height: auto;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+        }
+        /* Fonte da imagem */
+        .figura-fonte {
+        font-size: 12px !important;
+        font-style: italic;
+        margin-top: 0.5rem;
+        text-align: center !important;
+        }
+        /* Container principal */
+.flip-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Agora sempre serão 4 por linha */
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px; /* espaçamento lateral */
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  backface-visibility: hidden;
+  border: 2px solid #134969;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.flip-card-front {
+  background-color: #134969;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: #000;
+  transform: rotateY(180deg);
+  font-size: 13px;
+  line-height: 1.4;
+}
+    .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    }
+/* Responsividade */
+@media (max-width: 768px) {
+  .flip-cards-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .flip-card {
+    min-width: 180px;
+    height: 180px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}  
+
+
+    /* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL */
+        /* Área da atividade */
+        .atividade-sectionb {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #cccccc28;
+            border: 2px solid #134969;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cabeçalho com título e imagem */
+        .atividade-headerb {
+            display: flex;
+            justify-content: space-between; /* Agora título na esquerda e imagem na direita */
+            align-items: center;
+            border-bottom: 2px solid #134969;
+            padding-bottom: 5px;
+        }
+
+        .atividade-headerb h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: normal;
+            color: #134969;
+            font-size: 35px;
+            margin: 0;
+        }
+
+        .atividade-headerb img {
+            height: 60px;
+        }
+
+        /* Texto abaixo */
+        .atividade-textob {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Imagem clicável centralizada */
+        .atividade-quizz {
+            text-align: center; /* Centraliza o conteúdo interno */
+        }
+
+        .atividade-quizz img {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .atividade-quizz img:hover {
+            transform: scale(1.05);
+        }
+        .btn-fechar-quizz {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #134969;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-fechar-quizz:hover {
+            background-color: #2e7e8e;
+        }
+        @media (max-width: 768px) {
+            .atividade-sectionb {
+                padding: 15px;
+                margin: 20px 10px;
+            }
+
+            .atividade-headerb {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                text-align: left;
+            }
+
+            .atividade-headerb h2 {
+                font-size: 28px;
+                text-align: left;
+            }
+
+            .atividade-headerb img {
+                height: 50px;
+                align-self: flex-end; /* mantém a imagem à direita se desejar */
+            }
+
+            .atividade-textob {
+                font-size: 15px;
+                text-align: justify;
+            }
+
+            .atividade-quizz img {
+                width: 100px;
+            }
+        }
+    /* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL *//* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL */
+         /* Estilo base da seção */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #b9e5a92c;
+            border-bottom: 3px solid #92d678;
+        }
+
+        /* Imagem de topo */
+        .conclusao .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .conclusao .faixa-verde {
+            width: 100%;
+            background-color: #92d678;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .conclusao .faixa-verde .titulo-secao {
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 10px auto 10px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .conclusao .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .conclusao p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .conclusao .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .conclusao p {
+                font-size: 1rem;
+            }
+            .conclusao .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .conclusao .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .conclusao p {
+                font-size: 0.95rem;
+            }
+        }
+
+         /* Estilo base da seção */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #3a96a657;
+            border-bottom: 3px solid #3a95a6;
+        }
+
+        /* Imagem de topo */
+        .referencias .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .referencias .faixa-verde {
+            width: 100%;
+            background-color: #3a95a6;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .referencias .faixa-verde .titulo-secao {
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 10px auto 10px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .referencias .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .referencias p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .referencias .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .referencias p {
+                font-size: 1rem;
+            }
+            .referencias .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .referencias p {
+                font-size: 0.95rem;
+            }
+        }
+        .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color:  #92d678;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #93d67875;
+            }
+
+            /* Estilização do rodapé */
+        .footer {
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .logo-final {
+            background-color: #b9e5a92c;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 3px solid #015A42;
+        }
+
+        .logo-final img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        /* Nova seção com os títulos ocupando a tela inteira */
+        .ficha-titulos {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .ficha-titulos h2,
+        .ficha-titulos h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            font-size: 40px;
+            color: #0058B4;
+            margin: 10px 0;
+        }
+
+        /* Mantemos a ficha técnica como estava */
+        .ficha-tecnica {
+            background-color: #FFF;
+            padding: 60px 20px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .ficha-tecnica p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px auto;
+            max-width: 700px;
+        }
+
+        .ficha-tecnica strong {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .paragraforeduzido {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745860739/yt9l3oea3uvrdal8omhx.svg" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-programa">NÚCLEO DE RELAÇÕES INTERNACIONAIS</h1>
+            <h1 class="titulo-materia">PORTUGUÊS PARA ESTRANGEIROS</h1>
+            <h2 class="subtitulo-professor">Profª Simone Alves Pedersen</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 5 | Saúde e corpo humano</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="caixa-texto">
+            <div class="conteudo-centralizado">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá, estudante!</p>
+                <p>
+                    Normalmente, acordamos bem e dispostos. Tomamos o café da manhã e seguimos para o trabalho,
+                    universidade, academia ou outras atividades do dia. Mas há dias em que não estamos nos sentindo bem.
+                    O corpo parece pesado e cansado, e podemos sentir alguma dor ou mal-estar. Nesses momentos, é
+                    preciso procurar atendimento médico.
+                </p>
+                <p>
+                    Para conseguir comunicar com clareza o que sentimos, tanto na triagem feita pela enfermagem quanto na
+                    consulta feita pelo médico, é importante conhecer o nome das partes do corpo humano. Saber descrever
+                    os sintomas com precisão pode fazer toda a diferença no diagnóstico e no tratamento.
+                </p>
+                <p>
+                    Além disso, o vocabulário relacionado à saúde está presente em diversas situações do dia a dia: desde
+                    uma conversa sobre bem-estar até a leitura de uma receita médica ou de uma notícia sobre alguma
+                    doença. Por isso ampliar esse repertório é tão importante para quem está aprendendo português.
+                </p>
+                <p>
+                    Nesta unidade, vamos explorar os nomes das partes do corpo humano, os sintomas mais comuns,
+                    os profissionais da saúde e como funciona o sistema público de saúde no Brasil. Também vamos
+                    refletir sobre a diversidade física das pessoas e aprender a usar os verbos “ser” e “estar”. Vamos
+                    iniciar nossos estudos?
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="secao1" id="secao1">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                1. VERBOS “SER” E “ESTAR”
+            </h1>
+        </div>
+
+        <div class="conteudo-secao">
+            <p>
+                Vamos estudar um pouco de gramática agora? A língua portuguesa possui dois verbos diferentes que, em
+                muitas outras línguas, são representados por apenas um verbo: o verbo “ser” e o verbo “estar”. Ambos
+                podem significar “to be” em inglês, “être” em francês ou “sein” em alemão. Mas, no português, são usados
+                em contextos diferentes, o que pode gerar confusão para quem está aprendendo o idioma. A seguir,
+                vamos ver como e quando usar cada um desses verbos. Preste atenção nos exemplos e nas situações:
+                isso vai ajudar muito a se comunicar com mais clareza e naturalidade.
+            </p>
+            <h1 class="titulo-verde">
+                1.1 VERBO SER – O QUE É PERMANENTE
+            </h1>
+            <p>
+                O verbo “ser” tem um papel essencial na comunicação, principalmente em situações do dia a dia, como ao
+                buscar atendimento médico, se apresentar em um serviço público ou se identificar em um novo ambiente.
+                Ele é usado para indicar quem somos, de onde viemos, o que fazemos ou quais são nossas condições
+                permanentes. Por exemplo, ao chegar a um hospital ou posto de saúde, é comum dizer: “Sou alérgico.”
+            </p>
+            <p>
+                Essas frases transmitem informações importantes para o atendimento e a segurança da pessoa. O verbo
+                “ser” também aparece em situações como: “Sou professora.” (profissão) e “São duas horas.” (horário)
+            </p>
+            <p>
+                Em todos esses casos, o verbo “ser” comunica características duradouras ou estáveis, ajudando a organizar
+                a conversa de forma clara e eficiente. Saber usar o verbo “ser” corretamente facilita a interação, melhora
+                o atendimento e permite que o falante se apresente com segurança em qualquer situação do cotidiano.
+            </p>
+            <p>
+                Veja as situações mais comuns em que usamos o verbo ser:
+            </p>
+            <br>
+            <!-- Acordeons -->
+            <div class="acordeon-container">
+                <!-- Primeiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        IDENTIDADE
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Eu sou Maria. / Você é o João?
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Segundo acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        PROFISSÃO
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Ela é médica. / Nós somos professores.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Terceiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        NACIONALIDADE E ORIGEM
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Eles são brasileiros. / Eu sou de Portugal.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Quarto acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        CARACTERÍSTICAS FÍSICAS OU PSICOLÓGICAS PERMANENTES
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Ele é alto. / Ela é bela.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Quinto acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        RELAÇÕES PESSOAIS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Ela é minha irmã. / Eles são amigos.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Sexto acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        HORA E DATA
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Hoje é segunda-feira. / São três horas.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Sétimo acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        RELIGIÃO OU IDEOLOGIA
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Ele é católico. / Somos socialistas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="conteudo-secao">
+            <p>
+                Vamos ver mais alguns exemplos?
+            </p>
+            <br>
+            <section class="slider-texto-container tema-green" data-slider-id="2">
+                <!-- conteúdo do slider 2 -->
+                <div class="slider-texto-wrapper">
+                    <div class="slide-texto ativo">
+                        <p class="conteudo-texto">
+                            João é inteligente.<br>
+                            <strong>(característica)</strong>
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Nós somos estudantes de português.<br>
+                            <strong>(profissão/ocupação)</strong>
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Este prédio é antigo.<br>
+                            <strong>(característica duradoura)</strong>
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Amanhã é feriado.<br>
+                            <strong>(data)</strong>
+                        </p>
+                    </div>
+            
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores">
+                </div>
+            </section>
+            <br>
+            <p>
+                Como você viu até aqui, usamos o verbo “ser” para falar de características duradouras, identidades,
+                profissões, datas e outras situações que não mudam facilmente. Ele ajuda a construir frases que falam
+                sobre o que somos, de onde viemos e como nos reconhecemos.
+            </p>
+            <br>
+            <h1 class="titulo-verde">
+                1.2 VERBO ESTAR – O QUE É TEMPORÁRIO OU MOMENTÂNEO
+            </h1>
+            <p>
+                Diferente do verbo “ser”, o verbo “estar” é usado para falar de situações passageiras, que mudam com o
+                tempo. Ele aparece quando queremos expressar estados físicos ou emocionais, localizações, condições
+                temporárias ou até mesmo o clima no momento.
+            </p>
+            <p>
+                Por exemplo, se eu digo que “hoje eu estou coordenadora”. Significa que eu não sou a coordenadora, mas
+                estou na função de forma temporária, talvez substituindo a coordenadora que ficou doente, e eu fiquei no
+                lugar dela. Eu também posso dizer que “hoje estou italiana”, porque, por exemplo, estou vestida de italiana
+                em uma festa. Isso mostra que a situação é temporária e mutável, diferente de quando usamos o verbo ser.
+            </p>
+            <p>
+                Veja as situações mais comuns em que usamos o verbo “estar”:
+            </p>
+            <br>
+            <!-- Acordeons -->
+            <div class="acordeon-container">
+                <!-- Primeiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        ESTADOS EMOCIONAIS E FÍSICOS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Estou cansado. / Estamos felizes.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Segundo acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        LOCALIZAÇÃO
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            O livro está na mesa. / Eles estão no Brasil.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Terceiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        CLIMA NO MOMENTO
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            Está frio hoje. / O dia está bonito.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Quarto acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-headerc">
+                        SITUAÇÕES TEMPORÁRIAS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentc">
+                        <p>
+                            A escola está fechada. / Ele está doente.
+                        </p>
+                    </div>
+                </div>   
+            </div>
+        <br>
+        <p>
+            Vamos ver mais alguns exemplos?
+        </p>
+        <br>
+        <section class="slider-texto-container tema-green" data-slider-id="2">
+            <!-- conteúdo do slider 2 -->
+            <div class="slider-texto-wrapper">
+                <div class="slide-texto ativo">
+                    <p class="conteudo-texto">
+                        Eu estou com fome.<br>
+                        <strong>(estado passageiro)</strong>
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        A Ana está nervosa hoje.<br>
+                        <strong>(emoção momentânea)</strong>
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        A mochila está no carro.<br>
+                        <strong>(localização)</strong>
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        O tempo está chuvoso.<br>
+                        <strong>(condição do clima)</strong>
+                    </p>
+                </div>
+        
+            </div>
+        
+            <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+            <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+        
+            <div class="slider-texto-indicadores">
+            </div>
+        </section>
+        <br>
+        <p>
+            Agora que você já conhece os usos do verbo estar, ficou mais fácil perceber como ele se diferencia do
+            verbo ser, certo? Enquanto “ser” fala de identidade e permanência, “estar” expressa momentos e condições
+            passageiras. A seguir, vamos comparar algumas frases que mudam completamente de significado
+            dependendo do verbo usado.
+        </p>
+        <br>
+        <h1 class="titulo-verde">
+            1.3 COMPARAÇÕES IMPORTANTES – MUDANÇA DE SIGNIFICADO
+        </h1>
+        <p>
+            Algumas frases mudam completamente de sentido se usarmos “ser” ou “estar”. Por isso, é importante
+            observar o contexto e entender o que queremos expressar: algo permanente ou temporário?
+        </p>
+        <p>
+            Veja este exemplo:
+        </p>
+        <br>
+        <div class="container-arcos">
+            <div class="arco arco1"></div>
+            <div class="arco arco2"></div>
+        
+            <div class="conteudo-arcos">
+                <p>
+                    <strong>▸ Ela é bonita.</strong> → fala de uma característica permanente, algo que faz parte da identidade da pessoa.
+                </p>
+                <p>
+                    <strong>▸ Ela está bonita.</strong> → indica uma condição momentânea, algo que pode mudar, como o visual de hoje, por exemplo.
+                </p>
+            </div>
+        </div>
+        <br>
+        <p>
+            Essa diferença é comum em elogios ou comentários do dia a dia. Quando alguém diz “Como você está
+            bonita!”, está se referindo à aparência naquele momento, talvez pela roupa, penteado e maquiagem. Mas
+            se diz “Você é bonita”, está falando de uma característica considerada constante.
+        </p>
+        <p>
+            Para ilustrar essa diferença, veja o diálogo a seguir:
+        </p>
+        <br>
+        <!-- Slider de Quadrinhos -->
+        <section class="slider-quadrinhos" data-id="quadrinhos1">
+            <h2 class="titulo-slider">
+                <span class="figura">Figura 1.</span> Ser e estar
+            </h2>
+        
+            <div class="slider-container">
+                <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+        
+                <div class="slider">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754434217/Quadrinho_53_1_niakxv.png"
+                        alt="Quadrinho 1" class="slide ativo">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754434216/Quadrinho_53_2_v4hmns.png"
+                        alt="Quadrinho 2" class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754434217/Quadrinho_53_3_puzpde.png"
+                        alt="Quadrinho 3" class="slide">
+                </div>
+        
+                <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+            </div>
+        
+            <!-- Agora os dots ficam aqui fora -->
+            <div class="slider-indicadores">
+                <span class="dot" onclick="irParaSlide(0)"></span>
+                <span class="dot" onclick="irParaSlide(1)"></span>
+                <span class="dot" onclick="irParaSlide(2)"></span>
+            </div>
+        
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong> Elaborado pelo autor.</span>
+            </p>
+        </section>
+        <br>
+        <p>
+            Perceber a diferença entre ser e estar é essencial para se comunicar bem em português. Como vimos,
+            esses dois verbos podem parecer semelhantes à primeira vista, mas expressam ideias muito diferentes.
+            Enquanto “ser” fala sobre o que algo ou alguém é, “estar” indica como algo ou alguém está em um
+            determinado momento. Essa distinção é sutil, mas faz toda a diferença na hora de montar frases com
+            clareza e naturalidade.
+        </p>
+        <br>
+        <h1 class="titulo-verde">
+            1.4 CONJUGAÇÃO BÁSICA NO PRESENTE
+        </h1>
+        <p>
+            Agora que você já entendeu quando usar “ser” e “estar”, é hora de aprender como esses dois verbos se
+            conjugam no presente. Essa etapa é importante para formar frases corretamente no dia a dia.
+        </p>
+        <br>
+        <section class="tabs-section" id="grupo-tabs-a">
+            <div class="tabs-header">
+                <button class="tab-btn" data-target="exemplo1">VERBO SER</button>
+                <button class="tab-btn" data-target="exemplo2">VERBO ESTAR</button>
+        
+            </div>
+        
+            <div class="tabs-content">
+                <div id="exemplo1" class="tab-content">
+                    <p>▸ Eu sou</p>
+                    <p>▸ Tu és</p>
+                    <p>▸ Ele/Ela/Você é</p>
+                    <p>▸ Nós somos</p>
+                    <p>▸ Vós sois</p>
+                    <p>▸ Eles/Vocês são</p>
+                </div>
+                <div id="exemplo2" class="tab-content">
+                    <p>▸ Eu estou</p>
+                    <p>▸ Tu estás</p>
+                    <p>▸ Ele/Ela/Você está</p>
+                    <p>▸ Nós estamos</p>
+                    <p>▸ Vós estais</p>
+                    <p>▸ Eles/Vocês estão</p>
+                </div>
+            </div>
+        </section>
+        <br>
+        <p>
+            Resumindo, “ser” é para o que é fixo, duradouro, permanente, e “estar” é usado para indicar algo periódico,
+            por um espaço de tempo. Quando usamos o verbo estar, indicamos que a situação é reversível. Por
+            exemplo, o carro está quebrado, mas pode ser consertado. Quando eu uso o verbo ser, a condição não
+            será mudada tão facilmente, ou trata-se de uma afirmação ou constatação, por exemplo, estudar é muito
+            importante, em qualquer parte do mundo.
+        </p>
+        </div>
+    </section>
+    <section class="secao2" id="secao2">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745482633/lzh6tivsuwgnneylpzvp.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                2. SINTOMAS BÁSICOS
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                Você já percebeu como o nosso corpo reage às mudanças do clima? Em um país como o Brasil, que tem
+                dimensões continentais e uma enorme diversidade climática, as variações de temperatura e umidade
+                podem influenciar diretamente nossa saúde.
+            </p>
+            <p>
+                Em algumas regiões, especialmente no outono e no inverno, pode haver uma grande variação térmica ao
+                longo do dia: manhãs frias, tardes muito quentes e noites novamente frias. No verão, o problema costuma
+                ser a baixa umidade do ar, que pode afetar a respiração e o bem-estar.
+            </p>
+            <p>
+                Já em outras regiões, como o norte do país, a umidade do ar é muito alta durante quase o ano inteiro.
+                Essas variações climáticas são comuns porque o Brasil está, em sua maioria, localizado na zona tropical,
+                o que favorece o clima quente e úmido.
+            </p>
+            <p>
+                A seguir, vamos conhecer os principais tipos de clima no Brasil para entender melhor como eles influenciam
+                nossa saúde.
+            </p>
+            <!-- Acordeons -->
+            <div class="acordeon-container">
+                <!-- Primeiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        CLIMA EQUATORIAL
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-content">
+                        <p>
+                            Presente na região Norte, especialmente na Amazônia. É um clima quente e muito úmido,
+                            com chuvas abundantes o ano todo.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Segundo acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        CLIMA TROPICAL
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-content">
+                        <p>
+                            Abrange boa parte do Centro-Oeste, Sudeste e parte do Nordeste. Tem duas estações
+                            bem definidas: uma chuvosa no verão e outra seca no inverno.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Terceiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        CLIMA SEMIÁRIDO
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-content">
+                        <p>
+                            Presente no interior do Nordeste. É quente e seco, com poucas chuvas e longos períodos
+                            de seca.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Quarto acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        CLIMA TROPICAL DE ALTITUDE
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-content">
+                        <p>
+                            Encontrado em áreas elevadas do Sudeste, como em Minas Gerais e parte de São
+                            Paulo. É mais ameno, com invernos frios e secos e verões quentes e úmidos.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Quinto acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        CLIMA SUBTROPICAL
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-content">
+                        <p>
+                            Presente na região Sul do Brasil. Tem estações bem marcadas, com verões quentes e
+                            invernos frios, e pode haver geadas e até neve em algumas áreas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <section class="card-horizontal-praticar">
+                <h2 class="titulo-praticar">Vamos explorar?</h2>
+                <p class="texto-praticar">
+                    Agora que você já viu os principais tipos de clima no Brasil, que tal explorar um pouco mais?
+                </p>
+                <p class="texto-praticar">
+                    No site do INMET (Instituto Nacional de Meteorologia), você pode conferir a previsão do tempo para a sua cidade e
+                    ver como o clima varia em diferentes regiões do país. Acesse: https://portal.inmet.gov.br/. Acesso em: 21 maio. 2025.                </p>
+                <img class="imagem-praticar"
+                    src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745482633/lzh6tivsuwgnneylpzvp.png"
+                    alt="Imagem de atividade prática">
+            </section>
+
+            <br>
+
+            <p>
+                Embora o clima influencie nossa saúde, nem todas as doenças estão ligadas às variações climáticas.
+                Temos questões genéticas, ambientais e até mesmo causadas pela mudança climática. Algumas doenças,
+                no entanto, ocorrem com mais frequência em certas épocas do ano, como aquelas transmitidas por
+                mosquitos, que se propagam com o tempo quente e água parada, como o Aedes aegypti. Esse mosquito
+                também pode transmitir zika, chikungunya e febre amarela. No ciclo silvestre, os mosquitos Haemagogus
+                e Sabethes são os principais vetores.
+            </p>
+            <br>
+        <div class="outer-container">
+            <div class="inner-container">
+        
+                <!-- Seção da imagem e descrição -->
+                <div class="image-section">
+                    <div class="figure-title">Figura 2.</div>
+                    <div class="figure-subtitle">Doenças e mosquitos</div>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754454860/Image48719_rndz91.png" alt="Mulher com gripe">
+                    <div class="image-caption">
+                        <strong>Fonte</strong>: Pixabay https://pixabay.com/pt/photos/
+                        jovem-mulher-gripe-rem%C3%A9dio-2171052/.
+                        Acesso em: 21 maio. 2025.
+                    </div>
+                </div>
+        
+                <!-- Seção do texto -->
+                <div class="text-section">
+                    Além das doenças transmitidas por mosquitos, há também muitas
+                    doenças respiratórias comuns no Brasil, que podem afetar pessoas
+                    de todas as idades. Algumas são causadas por vírus, como a gripe (ou
+                    influenza) e o resfriado comum, que provocam sintomas como febre,
+                    dor no corpo, coriza e tosse. Outras são causadas por bactérias,
+                    como a pneumonia, que atinge os pulmões e pode causar febre
+                    alta, dificuldade para respirar e dor no peito. Também há doenças
+                    crônicas, como a asma, que provoca o estreitamento das vias
+                    respiratórias quando estão inflamadas, dificultando a respiração. A
+                    bronquite, por sua vez, é uma inflamação dos brônquios que gera
+                    tosse intensa e acúmulo de muco. A rinite alérgica, bastante comum,
+                    surge quando a mucosa nasal é afetada por alergias, causando
+                    espirros, coceira e nariz entupido. Ainda é importante mencionar
+                    a Covid-19, causada pelo coronavírus, que pode provocar febre,
+                    tosse, falta de ar, perda de olfato e paladar, e em alguns casos se
+                    agravar. Outra doença grave é a tuberculose, uma infecção causada
+                    por bactérias que também atinge principalmente os pulmões.
+                </div>
+        
+            </div>
+        </div>
+        <br>
+        <p>
+            A seguir, você poderá conhecer melhor os sintomas mais comuns dessas e de outras doenças presentes
+            no Brasil. É sempre importante lembrar: caso perceba sinais semelhantes no seu corpo, não hesite,
+            procure ajuda médica.
+        </p>
+        <br>
+        <section class="slider-texto-container" data-slider-id="1">
+            <div class="slider-texto-wrapper">
+                <div class="slide-texto ativo">
+                    <p class="conteudo-texto">
+                        <strong>Gripe (Influenza)</strong>
+                    </p>
+                    <p class="conteudo-texto"> 
+                        Febre, dor de cabeça, tosse seca, coriza e dor no corpo são sintomas
+                        típicos da gripe. Apesar de parecida com o resfriado, costuma ser
+                        mais intensa e durar alguns dias.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Dengue</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Febre alta, dor atrás dos olhos, dores musculares e nas articulações, manchas vermelhas na pele e cansaço extremo podem
+                        indicar dengue. Fique atento se estiver em região com surtos.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Covid-19</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Febre, tosse seca, cansaço, perda de olfato e paladar, e dificuldade para respirar são sintomas frequentes da Covid-19.
+                        Alguns casos também apresentam dor de cabeça e dor no corpo.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Zika</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Os sintomas da zika costumam ser leves: febre baixa, coceira, manchas vermelhas pelo corpo, dor nas articulações e olhos
+                        vermelhos (conjuntivite sem secreção). Mesmo assim, requer atenção, especialmente para gestantes.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Chikungunya</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Causa febre alta, dor intensa nas articulações (principalmente nas mãos e pés), inchaço nos membros, manchas vermelhas
+                        na pele e fadiga. Os sintomas podem persistir por semanas ou até meses.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Viroses intestinais</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Náusea, vômito, dor abdominal, diarreia e febre leve são comuns em viroses gastrointestinais. A desidratação é um risco,
+                        por isso, é essencial manter boa hidratação e procurar orientação médica, se necessário.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Infecção urinária</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Ardência ao urinar, urgência para ir ao banheiro, dor no baixo ventre, urina escura ou com mau cheiro, e febre (em casos
+                        mais graves) são sinais de infecção urinária.
+                    </p>
+                </div>
+                <div class="slide-texto">
+                    <p class="conteudo-texto">
+                        <strong>Asma</strong>
+                    </p>
+                    <p class="conteudo-texto">
+                        Falta de ar, chiado no peito, tosse seca e sensação de aperto no peito são os principais sintomas da asma. O esforço
+                        físico ou mudanças bruscas de clima podem piorar as crises.
+                    </p>
+                </div>
+            </div>
+        
+            <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+            <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+        
+            <div class="slider-texto-indicadores">
+            </div>
+        </section>
+        <br>
+        
+        <section class="card-horizontal-praticar">
+            <h2 class="titulo-praticar">
+                SAIBA MAIS
+            </h2>
+            <p class="texto-praticar">
+                O própolis é uma substância natural que as abelhas produzem e tem sido utilizado na medicina natural por
+                centenas de anos. Podem ajudar a combater sintomas gripais e aliviar inflamações na garganta. Mas fique
+                atento! Algumas pessoas têm alergia a substâncias produzidas por abelhas. Para saber mais acesse o link:
+                <br><br>
+                <u>https://bvsms.saude.gov.br/video-de-animacao-destaca-o-poder-da-propolis-na-cicatrizacao-de-tecidos/.</u>
+                <br>
+                Acesso em: 21 maio 2025.
+            </p>
+            <img class="imagem-praticar"
+                src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745482633/lzh6tivsuwgnneylpzvp.png"
+                alt="Imagem de atividade prática">
+        </section>
+        <br>
+        <p>
+            Nosso corpo pode reagir de várias formas diante das doenças. Conhecer os sintomas mais frequentes é
+            fundamental para identificar sinais de alerta e buscar atendimento médico rapidamente. No vídeo a seguir,
+            vamos entender melhor como algumas doenças se manifestam.
+        </p>
+        <br>
+        <!-- Bloco de vídeo com imagem de fundo -->
+        <div class="video-thumbnail"
+            data-video="https://player-vz-04af0c61-9a0.tv.pandavideo.com.br/embed/?v=d4afd391-acd2-4232-84cb-58c5db6aa5da&preload=false">
+            <div class="video-bg"></div>
+            <div class="play-icon">&#9658;</div>
+        </div>
+        
+        <!-- Modal de Vídeo -->
+        <div id="videoModal" class="video-modal">
+            <div class="modal-content">
+                <span class="fechar-modal">&times;</span>
+                <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <br>
+        </div>
+    </section>
+    <section class="secao1" id="secao3">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                3. SAÚDE PÚBLICA
+            </h1>
+        </div>
+
+        <div class="conteudo-secao">
+            <p>
+                No Brasil, o acesso à saúde é um direito de todos e um dever do Estado, garantido pela Constituição
+                de 1988. Isso significa que qualquer pessoa, brasileira ou estrangeira residente no país, pode receber
+                atendimento médico gratuito por meio do SUS - <i>Sistema Único de Saúde</i>.
+            </p>
+            <p>
+                O SUS foi criado em 1988, com a promulgação da Constituição Federal do Brasil. Foi oficialmente
+                regulamentado e começou a funcionar em 1990, por meio da Lei nº 8.080/1990, conhecida como Lei
+                Orgânica da Saúde.
+            </p>
+            <br>
+            <div class="outer-container-alt">
+                <div class="inner-container-alt">
+            
+                    <!-- Seção da imagem e descrição -->
+                    <div class="image-section">
+                        <div class="figure-header">
+                            <span class="figure-title-alt">Figura 3.</span>
+                            <span class="figure-subtitle">O SUS</span>
+                        </div>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754493296/jovem-medico-apoiando-o-seu-paciente_i6t6oz.jpg"
+                            alt="Mulher com gripe">
+                        <div class="image-caption">
+                            <strong>Fonte</strong> 123RF.
+                        </div>
+                    </div>
+            
+                    <!-- Seção do texto -->
+                    <div class="text-section">
+                        O objetivo do SUS é oferecer atendimento médico universal e
+                        gratuito, desde a atenção básica, como consultas e vacinas,
+                        até tratamentos mais complexos, como cirurgias, exames,
+                        internações e transplantes. É considerado um modelo de
+                        atendimento em saúde pública, por chegar aos locais mais
+                        ermos do país.
+                        <br><br>
+                        Além de hospitais, unidades de pronto atendimento (UPA)
+                        e postos de saúde, o SUS também realiza campanhas
+                        de vacinação, controle de doenças, programas de saúde
+                        da família e ações de educação em saúde. O governo
+                        também tem uma lista de medicamentos básicos que são
+                        distribuídos gratuitamente.
+                    </div>            
+                </div>
+            </div>
+            <br>
+            <p>
+                Apesar do alcance e da importância do SUS, ainda existem desafios a serem enfrentados. Em algumas
+                regiões, há falta de profissionais especializados, o que pode gerar filas de espera, especialmente em casos
+                mais complexos, como transplantes de órgãos. Muitas vezes, os pacientes precisam esperar por meses
+                ou até anos — e nem sempre é possível esperar tanto tempo. Por isso, campanhas de conscientização
+                sobre a doação de órgãos são fundamentais. Elas ajudam a salvar vidas e a reduzir o tempo de espera
+                de quem precisa com urgência de um transplante.
+            </p>
+            <p>
+                Para ajudar você a entender como funciona o atendimento em uma unidade de saúde pública, veja o
+                exemplo abaixo. Esse diálogo simula uma situação real em uma Unidade de Pronto Atendimento (UPA).
+            </p>
+            <br>
+            <!-- Slider de Quadrinhos -->
+            <section class="slider-quadrinhos" data-id="quadrinhos1">
+                <h2 class="titulo-slider">
+                    <span class="figura">Figura 4.</span> A triagem
+                </h2>
+            
+                <div class="slider-container">
+                    <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+            
+                    <div class="slider">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754497892/Quadrinho_51_1_d3tgmg.png"
+                            alt="Quadrinho 1" class="slide ativo">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754497892/Quadrinho_51_2_g11ek0.png"
+                            alt="Quadrinho 2" class="slide">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754497892/Quadrinho_51_3_egjpno.png"
+                            alt="Quadrinho 3" class="slide">
+                    
+                    </div>
+            
+                    <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+            
+                <!-- Agora os dots ficam aqui fora -->
+                <div class="slider-indicadores">
+                    <span class="dot" onclick="irParaSlide(0)"></span>
+                    <span class="dot" onclick="irParaSlide(1)"></span>
+                    <span class="dot" onclick="irParaSlide(2)"></span>
+                </div>
+            
+                <p class="fonte-imagem">
+                    <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+                </p>
+            </section>
+            <!-- Modal de Imagem Ampliada -->
+            <div id="modal-imagem" class="modal-imagem">
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+                <img class="imagem-modal" id="imagem-ampliada" alt="Imagem ampliada">
+            
+                <!-- Setas de navegação -->
+                <button class="seta-modal esquerda" onclick="navegarModal(-1)">&#10094;</button>
+                <button class="seta-modal direita" onclick="navegarModal(1)">&#10095;</button>
+            
+                <!-- Indicador numérico -->
+                <div class="indicador-contador" id="contador-modal">1 / 1</div>
+            
+                <!-- Pontinhos -->
+                <div class="indicador-pontos" id="pontos-modal"></div>
+            </div>
+            <br>
+            <p>
+                A <strong>Constituição Federal de 1988</strong>, no artigo 196, assegura que a saúde é “direito de todos e dever do
+                Estado”. Isso inclui tanto brasileiros quanto estrangeiros, independentemente da situação migratória. Para
+                garantir esse direito a <strong>Lei de Migração (Lei nº 13.445/2017)</strong> reforça que nenhum estrangeiro pode ser
+                discriminado no acesso a serviços públicos, inclusive os de saúde, garantindo igualdade de tratamento
+                aos migrantes.
+            </p>
+            <p>
+                Em <strong>abril de 2024</strong>, o <strong>Ministério da Saúde</strong> reforçou esse compromisso ao publicar uma <strong>nota técnica</strong> com
+                orientações específicas para o atendimento digno de migrantes, refugiados e apátridas. Entre as diretrizes
+                estão o direito ao atendimento mesmo na ausência de documentação, o acolhimento que respeita a
+                diversidade cultural, e a recomendação do uso de materiais multilíngues, além da capacitação das equipes
+                para o atendimento intercultural.
+            </p>
+            <p>
+                O atendimento exemplificado na Figura 4, é comum nas unidades públicas de saúde, como as UPAs, e
+                ajuda a organizar a prioridade dos casos. Depois da triagem feita pela enfermagem, o paciente aguarda
+                para ser atendido por um profissional médico.
+            </p>
+            <p>
+                Enquanto aguarda pelo atendimento, é importante lembrar de um problema recorrente no Brasil: a automedicação.
+                Você deve ter observado a quantidade de farmácias que existem aqui. Segundo reportagem da revista Veja
+                (Moratelli, 2024), há mais de 90.000 farmácias no Brasil. É importante procurar orientação profissional e não
+                consumir medicamentos sem prescrição médica, pois podem mascarar os sintomas e tornar o diagnóstico
+                mais difícil. Sempre que possível, procure ajuda profissional antes de iniciar qualquer tratamento.
+            </p>
+            <p>
+                Depois de passar pela triagem, o paciente aguarda pelo atendimento médico, no qual será examinado
+                e exames adicionais podem ser pedidos. Veja, a seguir, como pode ser essa conversa e por que é tão
+                importante relatar bem os sintomas.
+            </p>
+            <br>
+            <!-- Slider de Quadrinhos -->
+            <section class="slider-quadrinhos" data-id="quadrinhos1">
+                <h2 class="titulo-slider">
+                    <span class="figura">Figura 5.</span> Diálogo com o médico
+                </h2>
+            
+                <div class="slider-container">
+                    <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+            
+                    <div class="slider">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754498066/Quadrinho_52_1_ry1wkk.png"
+                            alt="Quadrinho 1" class="slide ativo">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754498066/Quadrinho_52_2_cinhwx.png"
+                            alt="Quadrinho 2" class="slide">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754498066/Quadrinho_52_3_xh2hmw.png"
+                            alt="Quadrinho 3" class="slide">
+            
+                    </div>
+            
+                    <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+            
+                <!-- Agora os dots ficam aqui fora -->
+                <div class="slider-indicadores">
+                    <span class="dot" onclick="irParaSlide(0)"></span>
+                    <span class="dot" onclick="irParaSlide(1)"></span>
+                    <span class="dot" onclick="irParaSlide(2)"></span>
+                </div>
+            
+                <p class="fonte-imagem">
+                    <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+                </p>
+            </section>
+            <br>
+            <section class="card-horizontal-praticar-alt">
+                <h2 class="titulo-praticar-alt">Vamos explorar?</h2>
+                <p class="texto-praticar">
+                    O site do SUS explica que o atendimento é para todos, sem discriminação, e vai desde a gestação até o final
+                    da vida, passando desde uma simples aferição da pressão arterial até o transplante de órgãos, de forma
+                    gratuita, em qualquer localidade do país.
+                </p>
+                <p class="texto-praticar">
+                <u>https://www.gov.br/saude/pt-br/sus</u>. Acesso em: 22 maio 2025.
+                </p>
+                <img class="imagem-praticar"
+                    src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745524189/vm6embgebhgp2mhck5qn.png"
+                    alt="Imagem de atividade prática">
+            </section>
+            <br>
+            <p>
+                Apesar dos desafios, o Sistema Único de Saúde (SUS) segue sendo uma das maiores conquistas sociais
+                do Brasil. Todos os dias, milhões de pessoas são atendidas gratuitamente, fazem seus exames, recebem
+                vacinas, passam por cirurgias, transplantes e recebem medicamentos básicos gratuitos. O SUS resiste,
+                se reinventa e continua cumprindo seu papel essencial: garantir saúde para todos.
+            </p>
+            <br>
+            <!-- Bloco de vídeo com estilo variante -->
+            <div class="video-thumbnail estilo-azul"
+                data-video="https://player-vz-04af0c61-9a0.tv.pandavideo.com.br/embed/?v=bcad0c56-47cc-423f-a50e-1c96b3ef9dfe&preload=false">
+                <div class="video-bg"
+                    style="background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1745434099/k1hkgcwcv7ydys0dxmzu.jpg');">
+                </div>
+                <div class="play-icon">&#9658;</div>
+            </div>
+            
+            <!-- Modal de Vídeo -->
+            <div id="videoModal" class="video-modal">
+                <div class="modal-content">
+                    <span class="fechar-modal">&times;</span>
+                    <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+    <section class="secao4" id="secao4">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745601513/wglkd0x3l2uasackwlxn.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                4. DESCRIÇÃO FÍSICA
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                O corpo humano é uma estrutura complexa, formada por muitas partes e órgãos interconectados, que
+                funcionam em conjunto para garantir nossa saúde e bem-estar. Cada parte tem uma função específica, e
+                todas são importantes para o equilíbrio do organismo. A ciência tem comprovado o quanto é importante
+                que a saúde mental e a saúde física andem de mãos dadas.
+            </p>
+            <p>
+                De forma geral, podemos dividir o corpo humano em três partes principais: cabeça, membros e tronco.
+                A cabeça é a região onde ficam o cérebro, os olhos, o nariz, a boca e os ouvidos. O cérebro é o órgão
+                responsável por comandar todas as funções do corpo. Por meio dos olhos enxergamos, pelo nariz sentimos
+                os cheiros, pela boca percebemos os sabores, e pelos ouvidos escutamos os sons. Esses sentidos nos
+                ajudam a compreender o mundo ao nosso redor.
+            </p>
+            <p>
+                Os membros se dividem em <strong>superiores</strong>, braços e mãos, e <strong>inferiores</strong>, pernas e pés. São eles que nos permitem
+                realizar movimentos, manipular objetos, caminhar, praticar esportes e diversas outras atividades do dia a dia.
+            </p>
+            <br>
+            <div class="figura-container">
+                <p class="figura-titulo">
+                    <strong class="figura-numero">Figura 6.</strong> <span class="figura-descricao">Corpo Humano</span>
+                </p>
+            
+                <div class="figura-quadro">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754500670/figura_06_fowbea.png" alt="Corpo Humano"
+                        class="figura-imagem">
+                </div>
+            
+                <p class="figura-fonte"><strong>Fonte</strong>: 123RF.</p>
+            </div>
+            <br>
+            <p>
+                O tronco é a parte central do corpo humano. É nele que ficam alguns dos órgãos mais importantes para o
+                funcionamento do organismo, como o coração, os pulmões, o estômago e os intestinos. Podemos dividir
+                o tronco em duas regiões: o <strong>tórax</strong>, onde ficam os pulmões e o coração, e o <strong>abdômen</strong>, onde ficam o
+                estômago e os intestinos.
+            </p>
+            <p>
+                O coração é um músculo que funciona como uma bomba, responsável por bombear o sangue para todo
+                o corpo, levando oxigênio e nutrientes às células e retirando o que elas não precisam mais, como o gás
+                carbônico. Já os pulmões são os órgãos da respiração. São eles que absorvem o oxigênio do ar que
+                respiramos e eliminam o gás carbônico. Assim como o coração é responsável por distribuir o sangue para
+                todo o corpo, os pulmões são responsáveis por distribuir oxigênio para o sangue, que também precisa
+                chegar em todas as partes do corpo humano.
+            </p>
+            <br>
+            <div class="figura-container">
+                <p class="figura-titulo">
+                    <strong class="figura-numero">Figura 7.</strong> <span class="figura-descricao">Órgãos do Corpo Humano</span>
+                </p>
+            
+                <div class="figura-quadro">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754501623/figura_07_xoiyvk.png" alt="Corpo Humano"
+                        class="figura-imagem" onclick="abrirModalImagem(this.src)">
+                </div>
+            
+                <p class="figura-fonte"><strong>Fonte</strong>: 123RF.</p>
+            </div>
+            <br>
+            <p>
+                O estômago é um órgão do sistema digestivo. O sistema digestivo é responsável por transformar os
+                alimentos em nutrientes que o corpo pode usar. Esse sistema realiza três etapas importantes: ele digere,
+                absorve e elimina o que não é necessário. Começa na boca, passa pelo estômago e intestinos, e termina
+                na eliminação das fezes.
+            </p>
+            <p>
+                Hoje, já se sabe que a saúde do sistema digestivo está ligada a muitas outras áreas do corpo. Pesquisas
+                recentes (Fernandes, 2023) mostram que os intestinos têm relação com doenças como enxaquecas e
+                até mesmo problemas de saúde mental. Isso porque existe uma conexão entre o intestino e o cérebro, e
+                quando a flora intestinal está comprometida todo o equilíbrio do organismo pode ser afetado.
+            </p>
+            <p>
+                Os intestinos se dividem em duas partes: <strong>intestino delgado</strong>, que absorve os nutrientes dos alimentos
+                consumidos, e <strong>intestino grosso</strong>, que é responsável por absorver água e formar as fezes.
+            </p>
+            <p>
+                Outra parte importante do corpo são os dentes, localizados dentro da boca. Quando somos pequenos,
+                temos os dentes de leite, que depois são trocados por dentes permanentes. Usamos os dentes para
+                cortar, mastigar e triturar alimentos, o que auxilia no processo de digestão. Já a língua, com suas papilas
+                gustativas, sentimos os sabores (como doce, salgado, azedo e amargo). Mas ela não serve apenas para
+                isso: a língua também nos ajuda na fala e na deglutição. Sem ela, seria difícil comer e se comunicar.
+            </p>
+            <br>
+            <div class="outer-container-altv">
+                <div class="inner-container-altv">
+            
+                    <!-- Seção da imagem e descrição -->
+                    <div class="image-section">
+                        <div class="figure-header">
+                            <span class="figure-title-alt">Figura 8.</span>
+                            <span class="figure-subtitle">A boca</span>
+                        </div>
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1754502735/Image48642_owfiyl.jpg"
+                            alt="Boca Aberta">
+                        <div class="image-caption">
+                            <strong>Fonte:</strong> <u>Freepik https://br.freepik.com/
+                            fotos-vetores-gratis/boca-aberta.</u><br>
+                            Acesso em: 21 maio. 2025.
+                        </div>
+                    </div>
+            
+                    <!-- Seção do texto -->
+                    <div class="text-section">
+                        Para manter a saúde da boca, é importante visitar o dentista regularmente.
+                        Nessas consultas, é possível fazer uma limpeza mais profunda dos dentes,
+                        verificar se não temos nenhuma cárie ou problema nas gengivas. Os
+                        dentistas também podem identificar sinais como manchas escuras que
+                        sinalizam a possibilidade de câncer de boca, como publicado em artigo
+                        da BBC News Brasil (2023). Entre os problemas mais comuns estão as
+                        aftas, que são pequenas feridas dentro da boca, na língua, bochecha ou
+                        gengiva. Embora geralmente sejam inofensivas, podem causar incômodo
+                        e merecem atenção se forem recorrentes.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>
+                A medicina é uma área ampla, e por isso é dividida em diferentes especialidades. Cada profissional cuida
+                de uma parte específica do corpo ou de certos tipos de doenças. Além do clínico geral (ou médico da
+                família), que faz o primeiro atendimento e cuida da saúde de forma mais ampla, existem muitas outras
+                especializações. Veja algumas delas:
+            </p>
+            <br>
+            <div class="flip-cards-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">CLÍNICA GERAL</div>
+                        <div class="flip-card-back">
+                            Trata doenças
+                            comuns e gerais
+                            do corpo.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Medicina da Família</div>
+                        <div class="flip-card-back">
+                            Cuida da saúde de toda a família, em todas as fases da vida.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Cardiologia</div>
+                        <div class="flip-card-back">
+                            Cuida do coração e sistema circulatório.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Pneumologia</div>
+                        <div class="flip-card-back">
+                            Trata doenças dos pulmões e da respiração.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Gastroenterologia</div>
+                        <div class="flip-card-back">
+                            Cuida do sistema digestivo (estômago, intestinos, fígado).
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Nefrologia</div>
+                        <div class="flip-card-back">
+                            Trata doenças dos rins e vias urinárias.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Neurologia</div>
+                        <div class="flip-card-back">
+                            Cuida do cérebro, medula e nervos.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Endocrinologia</div>
+                        <div class="flip-card-back">
+                            Trata doenças hormonais e glândulas.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Reumatologia</div>
+                        <div class="flip-card-back">
+                            Cuida de articulações, músculos e doenças autoimunes.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Cirurgia Geral</div>
+                        <div class="flip-card-back">
+                            Realiza cirurgias em órgãos internos, como apêndice e vesícula.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Cirurgia Plástica</div>
+                        <div class="flip-card-back">
+                            Faz cirurgias reparadoras ou estéticas.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Ortopedia</div>
+                        <div class="flip-card-back">
+                            Cuida de ossos, músculos, articulações e coluna.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Pediatria</div>
+                        <div class="flip-card-back">
+                            Cuida da saúde de crianças e adolescentes.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Geriatria</div>
+                        <div class="flip-card-back">
+                            Trata da saúde de idosos.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Ginecologia</div>
+                        <div class="flip-card-back">
+                            Cuida da saúde feminina (útero, ovários, menstruação).
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Obstetrícia</div>
+                        <div class="flip-card-back">
+                            Acompanha gravidez, parto e pós-parto.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Dermatologia</div>
+                        <div class="flip-card-back">
+                            Trata da pele, cabelo e unhas.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Oftalmologia</div>
+                        <div class="flip-card-back">
+                            Cuida dos olhos e da visão.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Otorrinolaringologia</div>
+                        <div class="flip-card-back">
+                            Trata de ouvidos, nariz e garganta.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Psiquiatria</div>
+                        <div class="flip-card-back">
+                            Cuida da saúde mental e emocional.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Urologia</div>
+                        <div class="flip-card-back">
+                            Trata do sistema urinário e órgãos reprodutores masculinos.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Hematologia</div>
+                        <div class="flip-card-back">
+                            Cuida do sangue e órgãos que o produzem.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Infectologia</div>
+                        <div class="flip-card-back">
+                            Trata doenças causadas por vírus, bactérias, fungos e parasitas.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Oncologia</div>
+                        <div class="flip-card-back">
+                            Cuida do diagnóstico e tratamento do câncer.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Anestesiologia</div>
+                        <div class="flip-card-back">
+                            Aplica anestesias e cuida da dor em cirurgias.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Medicina do Trabalho</div>
+                        <div class="flip-card-back">
+                            Cuida da saúde do trabalhador.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Medicina Esportiva</div>
+                        <div class="flip-card-back">
+                            Trata lesões e acompanha atletas.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Medicina Legal</div>
+                        <div class="flip-card-back">
+                            Atua na área médica ligada à justiça.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Radiologia</div>
+                        <div class="flip-card-back">
+                            Interpreta exames de imagem como raio-x, tomografia e ressonância.
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Patologia</div>
+                        <div class="flip-card-back">
+                            Estuda doenças por meio de amostras de tecidos e exames laboratoriais.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>
+                Quando não estamos bem de saúde e precisamos de atendimento, podemos procurar a UPA - <i>Unidade
+                de Pronto Atendimento</i>, que atende à população gratuitamente. Mais adiante, vamos nos aprofundar no
+                sistema de saúde brasileiro, o SUS - <i>Sistema Único de Saúde</i>.
+            </p>
+            <p>
+                Ao estudar o corpo humano, também é importante lembrar que cada pessoa tem características físicas
+                únicas. Algumas são altas, outras são baixas. Existem pessoas magras, gordas, fortes ou com corpo
+                atlético. O cabelo também varia muito: pode ser liso, ondulado, cacheado ou crespo. A cor do cabelo pode
+                ser preta, castanha, loira, ruiva ou grisalha.
+            </p>
+            <p>
+                O mesmo vale para os olhos, que podem ser pequenos ou grandes, redondos ou puxados. As cores mais
+                comuns são castanho, azul e verde. A cor da pele também varia: pode ser branca, parda ou preta. Além
+                disso, algumas pessoas usam óculos, têm sardas ou pintas no rosto ou no corpo, barba, bigode ou costeleta.
+            </p>
+            <p>
+                São muitos os adjetivos que servem para informar características individuais de cada pessoa. Mas o mais
+                importante é lembrar que cada pessoa é única e merece ser tratada com respeito, independentemente
+                da sua aparência.
+            </p>
+            <br>
+            <section class="atividade-sectionb">
+                <div class="atividade-headerb">
+                    <h2>AGORA É SUA VEZ!</h2>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745601513/wglkd0x3l2uasackwlxn.png"
+                        alt="Ícone título">
+                </div>
+            
+                <p class="atividade-textob">
+                    Aprender uma nova língua é um processo, e praticar faz toda a diferença. Que tal reservar um tempinho para
+                    exercitar o que estudamos até agora? Use os exercícios como uma forma de revisar e se familiarizar ainda
+                    mais com o conteúdo. Vamos nessa?
+                </p>
+            
+                <div class="atividade-quizz">
+                    <a href="#" onclick="abrirQuizz(event)">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869741/r1sc3oyzzu1ca5mqiud4.png"
+                            alt="Imagem para abrir o quiz">
+                    </a>
+                </div>
+            
+                <div id="iframe-container" style="display: none; margin-top: 20px; position: relative;">
+                    <!-- Botão de fechar -->
+                    <button onclick="fecharQuizz()" class="btn-fechar-quizz">&times;</button>
+            
+                    <!-- Iframe do Genially -->
+                    <iframe id="quizz-iframe" src="" width="100%" height="500px"
+                        style="border: 2px solid #134969; border-radius: 10px;"></iframe>
+                </div>
+            </section>
+            <br>
+        </div>
+    </section>
+    <section class="conclusao" id="conclusao">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745524189/vm6embgebhgp2mhck5qn.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                CONCLUSÃO
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                Ao longo desta unidade, exploramos o vocabulário relacionado à saúde e ao corpo humano — um tema
+                essencial para a comunicação no dia a dia. Aprendemos a identificar as partes do corpo, reconhecer
+                sintomas de doenças comuns no Brasil e compreender como funciona o atendimento no Sistema Único
+                de Saúde (SUS). Também refletimos sobre a importância de evitar a automedicação e buscar orientação
+                profissional sempre que necessário.
+            </p>
+            <p>
+                Por fim, também aprendemos a diferença entre os verbos “ser” e “estar”, que em português têm diferentes
+                significados, enquanto em vários idiomas existe apenas um verbo para ambas as situações, do que é
+                permanente e o que é transitório. Esperamos que este conteúdo tenha ampliado o seu vocabulário e sua
+                compreensão sobre saúde, linguagem e cidadania.
+            </p>
+    
+            <div id="download" class="download-section">
+                <a href="https://drive.google.com/uc?export=download&id=1Y88V09WDvA8aYRSmPG5Y4tjMX082JN0v"
+                    class="download-btn">
+                    Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="referencias" id="referencias">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869736/jyzm19p9bgggekjdrgnz.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                REFERÊNCIAS
+            </h1>
+        </div>
+        <br>
+        <div class="conteudo-secao">
+            <p>
+                FERNANDES, F. Microbiota intestinal pode ajudar a entender casos de depressão. <strong>Jornal USP</strong>, 2023.
+                Disponível em: https://jornal.usp.br/radio-usp/microbiota-intestinal-pode-ajudar-a-entender-casos-de
+                depressao/. Acesso em: 17 maio. 2025.
+            </p>
+            <p>
+                MORATELLI, V. O que há por trás do impressionante número de farmácias no país. <strong>Veja</strong>, 2024. Disponível em
+                https://veja.abril.com.br/coluna/veja-gente/o-que-ha-por-tras-do-impressionante-numero-de-farmacias
+                no-pais. Acesso em: 12 maio 2025.
+            </p>
+            <p>
+                O QUE A boca nos diz sobre a saúde de nosso corpo. <strong>BBC News Brasil</strong>, 2023. Disponível em: <u>https://www.bbc.com/portuguese/articles/c6pekpk2517o</u>. Acesso em: 16 maio 2025.
+            </p>
+        </div>
+        <br>
+    </section>
+    <!-- Seção com os créditos e ficha técnica -->
+    <section class="ficha-tecnica">
+        <p>CASA NOSSA SENHORA DA PAZ – AÇÃO SOCIAL FRANCISCANA, PROVÍNCIA FRANCISCANA DA <br>
+            IMACULADA CONCEIÇÃO DO BRASIL – ORDEM DOS FRADES MENORES</p>
+        <br>
+        <p><strong>GESTOR DO CENTRO DE INOVAÇÃO E SOLUÇÕES EDUCACIONAIS - CISE</strong>
+            Franklin Portela Correia</p>
+    
+        <p><strong>COORDENADOR NÚCLEO DE RELAÇÕES INTERNACIONAIS - NRI</strong>
+            Lucas da Silveira Andrade</p>
+    
+        <p><strong>SUPERVISORA EDUCACIONAL</strong>
+            Juliane Cristine Batista</p>
+    
+        <p><strong>DESIGNER INSTRUCIONAL</strong>
+            Leticia dos Santos Vilela<br>
+            Sara Marques Batista</p>
+    
+        <p><strong>REVISÃO TEXTUAL</strong>
+            Luisa de Souza</p>
+    
+        <p><strong>PROJETO GRÁFICO</strong>
+            Lucas Ichimaru Testa<br>
+            Simone Aparecida Barbosa</p>
+    
+        <p><strong>DESENVOLVEDOR</strong>
+            Pedro Vinicius Pires de Oliveira Dias</p>
+    
+        <p><strong>PRODUTOR AUDIOVISUAL</strong>
+            Cassio Martins de Carvalho</p>
+    
+        <p><strong>EDIÇÃO DE VÍDEOS</strong>
+            Rafael da Silva Oliveira<br>
+            Hugo Henrique Ferreira da Silva</p>
+    
+        <p><span class="paragraforeduzido">
+                © 2025 Universidade São Francisco<br>
+                Avenida São Francisco de Assis, 218<br>
+                CEP 12916-900 – Bragança Paulista/SP
+        </p></span>
+    </section>
+    <section class="logo-final">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1746464849/kawkuex8fxesnmqpek5n.png"
+            alt="Logo do Projeto">
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+<script>
+    // Navbar
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const menu = document.querySelector('.navbar ul');
+            const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+            menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+            // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+            icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+            icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+        });
+        // Fechar o menu ao clicar em um link
+        const links = document.querySelectorAll('.navbar ul li a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i');
+
+                // Fecha o menu ao clicar no link
+                menu.classList.remove('show');
+                icons[0].style.display = 'block'; // Exibe o ícone de menu
+                icons[1].style.display = 'none'; // Esconde o ícone de fechar
+            });
+        });
+        // Captura o elemento navbar
+        const navbar = document.querySelector('.navbar');
+
+        // Função que altera a opacidade da navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                navbar.style.backgroundColor = 'rgba(29, 91, 122, 0.438)'; // Opacidade 80% rgba(29, 91, 122, 0.438);
+            } else {
+                navbar.style.backgroundColor = '#134969'; // Cor original sem transparência
+            }
+        });
+
+    const thumbnails = document.querySelectorAll('.video-thumbnail');
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('videoIframe');
+        const fechar = document.querySelector('.fechar-modal');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                const videoLink = thumbnail.getAttribute('data-video');
+                iframe.src = videoLink + "?autoplay=1";
+                modal.style.display = 'flex';
+            });
+        });
+
+        fechar.addEventListener('click', () => {
+            modal.style.display = 'none';
+            iframe.src = '';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                iframe.src = '';
+            }
+        });
+     document.querySelectorAll('.acordeon-header, .acordeon-headerb, .acordeon-headerc, .acordeon-headerd').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+                content.style.display = isVisible ? 'none' : 'block';
+                const icon = header.querySelector('.acordeon-icon');
+                if (icon) {
+                    icon.classList.toggle('bx-chevron-up', !isVisible);
+                    icon.classList.toggle('bx-chevron-down', isVisible);
+                }
+            });
+        });
+        function configurarTabs(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return; // Se não existir, evita erro no console
+
+            const buttons = container.querySelectorAll('button');
+            const contents = container.querySelectorAll('.tab-content');
+            const contentWrappers = container.querySelectorAll('.tabs-content, .tabs-contentb, .tabs-contentc, .tabs-contentd');
+
+            // Garante que tudo comece fechado
+            buttons.forEach(btn => btn.classList.remove('ativo'));
+            contents.forEach(content => content.classList.remove('ativo'));
+            contentWrappers.forEach(wrapper => wrapper.classList.remove('ativo'));
+
+            buttons.forEach((button, index) => {
+                // Clique com mouse
+                button.addEventListener('click', function () {
+                    ativarTab(this);
+                });
+
+                // Suporte ao teclado ← e →
+                button.addEventListener('keydown', function (e) {
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const nextIndex = (index + 1) % buttons.length;
+                        buttons[nextIndex].focus();
+                    } else if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const prevIndex = (index - 1 + buttons.length) % buttons.length;
+                        buttons[prevIndex].focus();
+                    } else if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        ativarTab(this); // Ativa com Enter ou Espaço
+                    }
+                });
+            });
+
+            function ativarTab(botao) {
+                const tabId = botao.getAttribute('data-target');
+                const targetContent = container.querySelector(`#${tabId}`);
+                const isActive = botao.classList.contains('ativo');
+
+                // Fecha todos
+                buttons.forEach(btn => {
+                    btn.classList.remove('ativo');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                contents.forEach(content => content.classList.remove('ativo'));
+                contentWrappers.forEach(wrapper => wrapper.classList.remove('ativo'));
+
+                // Ativa se ainda não estiver ativo
+                if (!isActive) {
+                    botao.classList.add('ativo');
+                    botao.setAttribute('aria-selected', 'true');
+                    if (targetContent) {
+                        targetContent.classList.add('ativo');
+                        const parentWrapper = targetContent.closest('.tabs-content, .tabs-contentb, .tabs-contentc, .tabs-contentd');
+                        if (parentWrapper) parentWrapper.classList.add('ativo');
+
+                        prepararModal(); // <-- CHAMA AQUI APÓS A ABA SER ATIVADA
+
+                    }
+                }
+            }
+
+            // Ativa a primeira aba por padrão
+            if (buttons.length > 0) {
+                ativarTab(buttons[0]);
+            }
+        }
+
+        // Inicializar os grupos de tabs
+        configurarTabs('grupo-tabs-a');
+        configurarTabs('grupo-tabs-b');
+        configurarTabs('grupo-tabs-c');
+        configurarTabs('grupo-tabs-d');
+        
+       document.querySelectorAll('.slider-quadrinhos').forEach((sliderContainer) => {
+            const slider = sliderContainer.querySelector('.slider');
+            const slides = slider.querySelectorAll('.slide');
+            const dots = sliderContainer.querySelectorAll('.dot');
+            let currentIndex = 0;
+
+            function mostrarSlide(index) {
+                currentIndex = (index + slides.length) % slides.length;
+                slides.forEach(slide => slide.classList.remove('ativo'));
+                dots.forEach(dot => dot.classList.remove('ativo'));
+
+                slides[currentIndex].classList.add('ativo');
+                dots[currentIndex].classList.add('ativo');
+            }
+
+            // Atribui os handlers aos botões de seta
+            sliderContainer.querySelector('.seta.esquerda').addEventListener('click', () => {
+                mostrarSlide(currentIndex - 1);
+            });
+            sliderContainer.querySelector('.seta.direita').addEventListener('click', () => {
+                mostrarSlide(currentIndex + 1);
+            });
+
+            // Atribui os handlers aos dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    mostrarSlide(index);
+                });
+            });
+
+            // Inicializa
+            mostrarSlide(0);
+        });
+
+        function prepararModal() {
+                document.querySelectorAll('.slider-quadrinhos').forEach((sliderContainer) => {
+                    const imagens = sliderContainer.querySelectorAll('.slide');
+                    imagens.forEach((img, index) => {
+                        img.style.cursor = 'pointer';
+                        img.addEventListener('click', () => {
+                            imagensModal = Array.from(imagens).map(i => i.src);
+                            indiceModal = index;
+                            abrirModal(imagensModal[indiceModal]);
+                        });
+                    });
+                });
+            }
+
+            function abrirModal(src) {
+                document.getElementById('imagem-ampliada').src = src;
+                document.getElementById('modal-imagem').classList.add('ativo');
+                atualizarContador();
+                atualizarPontos();
+            }
+
+            function fecharModal() {
+                document.getElementById('modal-imagem').classList.remove('ativo');
+            }
+
+            function navegarModal(direcao) {
+                indiceModal = (indiceModal + direcao + imagensModal.length) % imagensModal.length;
+                document.getElementById('imagem-ampliada').src = imagensModal[indiceModal];
+                atualizarContador();
+                atualizarPontos();
+            }
+
+            function atualizarContador() {
+                document.getElementById('contador-modal').textContent = `${indiceModal + 1} / ${imagensModal.length}`;
+            }
+
+            function atualizarPontos() {
+                const container = document.getElementById('pontos-modal');
+                container.innerHTML = '';
+                imagensModal.forEach((_, i) => {
+                    const ponto = document.createElement('span');
+                    if (i === indiceModal) ponto.classList.add('ativo');
+                    ponto.addEventListener('click', () => {
+                        indiceModal = i;
+                        document.getElementById('imagem-ampliada').src = imagensModal[i];
+                        atualizarContador();
+                        atualizarPontos();
+                    });
+                    container.appendChild(ponto);
+                });
+            }
+
+            
+        document.querySelectorAll('.slider-texto-container').forEach(initSliderTexto);
+
+            function initSliderTexto(container) {
+                const slides = container.querySelectorAll('.slide-texto');
+                const indicatorsContainer = container.querySelector('.slider-texto-indicadores');
+
+                indicatorsContainer.innerHTML = ''; // Limpa indicadores anteriores
+
+                // Cria os dots dinamicamente
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot-texto');
+                    dot.onclick = () => mostrarSlide(index);
+                    indicatorsContainer.appendChild(dot);
+                });
+
+                const dots = container.querySelectorAll('.dot-texto');
+                let currentIndex = 0;
+
+                function mostrarSlide(index) {
+                    slides.forEach(slide => slide.classList.remove('ativo'));
+                    dots.forEach(dot => dot.classList.remove('ativo'));
+
+                    currentIndex = (index + slides.length) % slides.length;
+
+                    slides[currentIndex].classList.add('ativo');
+                    dots[currentIndex].classList.add('ativo');
+                }
+
+                // Armazena a função no container para chamadas externas
+                container.mostrarSlideTexto = mostrarSlide;
+                container.getCurrentIndex = () => currentIndex;
+                mostrarSlide(0);
+            }
+
+            // Chamado pelos botões de seta
+            function mudarSlideTexto(button, direcao) {
+                const container = button.closest('.slider-texto-container');
+                const currentIndex = container.getCurrentIndex();
+                container.mostrarSlideTexto(currentIndex + direcao);
+            }
+
+            // Chamado pelos dots (não necessário, mas deixado por compatibilidade)
+            function irParaSlideTexto(dot, index) {
+                const container = dot.closest('.slider-texto-container');
+                container.mostrarSlideTexto(index);
+            }
+        
+
+        function abrirQuizz(event) {
+                event.preventDefault();
+                const iframeContainer = document.getElementById('iframe-container');
+                const iframe = document.getElementById('quizz-iframe');
+
+                // Link real do Genially
+                iframe.src = 'https://view.genially.com/68710cb3afaaeb62c6359511';
+                iframeContainer.style.display = 'block';
+            }
+
+            function fecharQuizz() {
+                const iframeContainer = document.getElementById('iframe-container');
+                const iframe = document.getElementById('quizz-iframe');
+
+                iframe.src = ''; // limpa o conteúdo do iframe
+                iframeContainer.style.display = 'none';
+            }         
+</script>
+</body>
+</html>
